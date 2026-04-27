@@ -3,125 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Noel Baroga — Portfolio</title>
+
+<title>Noel Baroga Portfolio</title>
 
 <style>
-/* ====== GLOBAL ====== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
+
+/* ===== Modern Dark Theme ===== */
 
 body {
-    background: #0f0f14;
-    color: #eaeaea;
-    line-height: 1.6;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0d0d0d;
+    color: #e6e6e6;
 }
 
-/* ====== HEADER ====== */
+/* Header */
+
 header {
-    background: linear-gradient(135deg, #6a0dad, #2b1055);
-    padding: 70px 20px;
     text-align: center;
+    padding: 60px 20px;
+    border-bottom: 1px solid #00ff88;
 }
 
 header h1 {
-    font-size: 3rem;
-    letter-spacing: 1px;
+    font-size: 42px;
+    color: #00ff88;
+    margin: 0;
 }
 
 header p {
+    color: #aaa;
     margin-top: 10px;
-    opacity: 0.9;
 }
 
-/* ====== SECTIONS ====== */
+/* Navigation */
+
+nav {
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: #00ff88;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* Sections */
+
 section {
     max-width: 1000px;
     margin: 40px auto;
-    padding: 25px;
+    padding: 20px;
 }
 
-/* ====== CARDS ====== */
-.card {
-    background: #161622;
-    border: 1px solid #2a2a3a;
+/* Section Titles */
+
+h2 {
+    color: #00ff88;
+    border-bottom: 2px solid #00ff88;
+    padding-bottom: 8px;
+}
+
+/* About Section */
+
+.about-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.profile-img {
+    width: 180px;
+    border-radius: 12px;
+    border: 2px solid #00ff88;
+}
+
+.about-text {
+    flex: 1;
+}
+
+/* Task Cards */
+
+.task-card {
+    background: #141414;
+    border: 1px solid #00ff88;
     border-radius: 12px;
     padding: 20px;
     margin-top: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    border-color: #6a0dad;
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #00ff88;
 }
 
-/* ====== HEADINGS ====== */
-h2 {
-    color: #b56bff;
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-    border-left: 4px solid #6a0dad;
-    padding-left: 10px;
-}
+/* Images */
 
-h3 {
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-/* ====== IMAGES ====== */
 .images-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
     gap: 10px;
+    flex-wrap: wrap;
     margin-top: 10px;
 }
 
 .images-grid img {
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid #2a2a3a;
+    width: 48%;
+    border-radius: 8px;
 }
 
-/* ====== BUTTON ====== */
-.file-link {
+/* Buttons */
+
+.file-btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 16px;
-    background: #6a0dad;
-    color: white;
+    margin-top: 12px;
+    padding: 8px 16px;
     border-radius: 8px;
+    background: #00ff88;
+    color: black;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
 }
 
-.file-link:hover {
-    background: #8b2fff;
+.file-btn:hover {
+    background: white;
 }
 
-/* ====== ABOUT ====== */
-#about p {
-    background: #161622;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #2a2a3a;
-}
+/* Footer */
 
-/* ====== FOOTER ====== */
 footer {
     text-align: center;
-    padding: 25px;
-    margin-top: 50px;
-    background: #0b0b10;
-    border-top: 1px solid #2a2a3a;
-    color: #888;
+    padding: 20px;
+    border-top: 1px solid #00ff88;
+    margin-top: 40px;
+    color: #aaa;
 }
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+.images-grid img {
+    width: 100%;
+}
+
+.about-container {
+    flex-direction: column;
+    text-align: center;
+}
+
+}
+
 </style>
 
 </head>
@@ -129,58 +168,133 @@ footer {
 <body>
 
 <header>
-    <h1>Noel Baroga</h1>
-    <p>3rd Year BSCS | Web Development & Data Analytics Portfolio</p>
+    <h1>./ Noel Baroga</h1>
+    <p>BSCS Student | Data & Web Portfolio</p>
 </header>
 
+<nav>
+    <a href="#about">About</a>
+    <a href="#tasks">Tasks</a>
+    <a href="#education">Education</a>
+</nav>
+
+<!-- ABOUT -->
+
 <section id="about">
-    <h2>About Me</h2>
-    <p>
-        Hi! I’m Noel Baroga. I enjoy web development, data analysis, and building practical systems that solve real problems. 
-        I aim to grow as a developer and improve my skills in full-stack development and data-driven applications.
-    </p>
+
+<h2>About Me</h2>
+
+<div class="about-container">
+
+<img src="Images/Profile.JPG" class="profile-img">
+
+<div class="about-text">
+<p>
+Hello! I'm Noel Baroga, a BSCS student passionate about web development,
+data analysis, and creating meaningful projects. I enjoy solving
+problems and continuously learning new technologies.
+</p>
+</div>
+
+</div>
+
 </section>
 
-<section>
-    <h2>Practice Tasks</h2>
+<!-- TASKS -->
 
-    <div class="card">
-        <h3>Practice Task 2 — Data Analysis Dashboard</h3>
-        <p>Sales dashboard analysis showing growth trends of Coca-Cola USA (2023).</p>
+<section id="tasks">
 
-        <div class="images-grid">
-            <img src="images/task2-1.png" alt="Dashboard 1">
-            <img src="images/task2-2.png" alt="Dashboard 2">
-        </div>
+<h2>Practice & Midterm Tasks</h2>
 
-        <a class="file-link" href="files/PracticeTask2.xlsx">Download Excel File</a>
-    </div>
+<!-- Practice Task -->
 
-    <div class="card">
-        <h3>Midterm Task 1 — ERD Design</h3>
-        <p>Entity Relationship Diagram for database structuring and modeling.</p>
+<div class="task-card">
 
-        <div class="images-grid">
-            <img src="images/erd.png" alt="ERD Diagram">
-        </div>
+<h3>Practice Task 2</h3>
 
-        <a class="file-link" href="files/MidtermTask1.xlsx">Download File</a>
-    </div>
+<p>Data Analysis Dashboard Project.</p>
+
+<div class="images-grid">
+
+<img src="Images/practice2-1.png">
+<img src="Images/practice2-2.png">
+
+</div>
+
+<a href="Files/practice-task2.xlsx"
+class="file-btn"
+target="_blank">
+
+Download Excel
+
+</a>
+
+</div>
+
+<!-- Midterm 1 -->
+
+<div class="task-card">
+
+<h3>Midterm Task 1</h3>
+
+<p>Entity Relationship Diagram.</p>
+
+<div class="images-grid">
+
+<img src="Images/midterm1.png">
+
+</div>
+
+<a href="Files/midterm1.xlsx"
+class="file-btn"
+target="_blank">
+
+Download File
+
+</a>
+
+</div>
+
+<!-- Midterm 2 -->
+
+<div class="task-card">
+
+<h3>Midterm Task 2</h3>
+
+<p>Data Preparation using Power Query.</p>
+
+<a href="Files/midterm2.pdf"
+class="file-btn"
+target="_blank">
+
+View PDF
+
+</a>
+
+</div>
+
 </section>
 
-<section>
-    <h2>Midterm Tasks</h2>
+<!-- EDUCATION -->
 
-    <div class="card">
-        <h3>Midterm Task 2 — Power Query</h3>
-        <p>Data cleaning and preparation using Power Query for structured datasets.</p>
+<section id="education">
 
-        <a class="file-link" href="files/MidtermTask2.pdf">View PDF</a>
-    </div>
+<h2>Education</h2>
+
+<p>
+College — Your University Name  
+<br>
+Senior High — Your School  
+<br>
+Junior High — Your School
+</p>
+
 </section>
 
 <footer>
-    <p>© 2026 Noel Baroga | Portfolio Website</p>
+
+<p>© 2026 Noel Baroga Portfolio</p>
+
 </footer>
 
 </body>
